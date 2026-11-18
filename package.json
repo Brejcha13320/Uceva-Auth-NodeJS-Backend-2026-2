@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsnd --respawn --clear src/app.ts",
     "build": "rimraf ./dist && tsc",
-    "start": "npm run build && npm run prisma:push && node dist/app.js",
+    "start": "npm run build && npm run prisma:deploy && node dist/app.js",
     "prisma:deploy": "npx prisma migrate deploy",
     "prisma:push": "npx prisma db push --accept-data-loss",
     "seed": "tsnd prisma/seed.ts"
